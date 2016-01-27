@@ -81,6 +81,7 @@ infinite recursion, keeping track of processed states.)"
         (apply #'evil-concat-keymap-alists result)
       (apply #'append result))))
 
+;;;###autoload
 (define-minor-mode pure-evil-mode
   "Mode that removes any overriding evil maps in any buffer."
   :lighter "pure-evil"
@@ -92,3 +93,4 @@ infinite recursion, keeping track of processed states.)"
     (evil-normalize-keymaps)))
 
 (provide 'pure-evil)
+;;; pure-evil.el ends here
