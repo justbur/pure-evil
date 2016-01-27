@@ -1,0 +1,14 @@
+* pure evil
+A minor mode for Emacs 
+
+** What?
+Temporarily remove keymaps with higher priority than the standard evil-mode
+keymaps.
+
+** Why?
+ 1. You want to search for/select/copy some text in a buffer easily, in a magit
+    buffer for instance
+ 2. You want to use a standard binding that's being shadowed.
+ 3. Some minor mode is driving you crazy.
+** How? 
+Install pure-evil.el in your path and toggle using =pure-evil-mode=.
