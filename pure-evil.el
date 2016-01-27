@@ -39,14 +39,7 @@ infinite recursion, keeping track of processed states.)"
          (map (cons
                (evil-state-property state :mode)
                (evil-state-property state :keymap t)))
-         (local-map (cons
-                     (evil-state-property state :local)
-                     (make-sparse-keymap)))
-         minor-mode-maps
-         aux-maps
-         overriding-maps
-         intercept-maps
-         (result `(,intercept-maps))
+         (result '(nil))
          (remove-duplicates (null excluded)))
     (unless (memq state enable)
       (setq enable (cons state enable)))
@@ -57,10 +50,6 @@ infinite recursion, keeping track of processed states.)"
        ;; the keymaps for STATE
        ((eq entry state)
         (setq result `(,@result
-                       (,local-map)
-                       ,minor-mode-maps
-                       ,aux-maps
-                       ,overriding-maps
                        (,map)))
         (push state excluded))
        ;; the keymaps for another state: call `evil-state-keymaps'
