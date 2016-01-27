@@ -1,4 +1,4 @@
-;;; pure-evil.el ---
+;;; pure-evil.el --- Emacs mode that purifies evil-mode
 
 ;; Copyright (C) 2015-2016 Justin Burkett
 
